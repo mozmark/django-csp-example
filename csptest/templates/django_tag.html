@@ -1,0 +1,21 @@
+{% load script %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample Django template</title>
+{% script %}
+window.addEventListener('load',function(){
+  document.querySelector('#timeDiv').appendChild(
+    document.createTextNode(new Date()));
+},false);
+console.log('foo');
+{% endscript %}
+
+{% script 'dangerous' %}
+console.log({{ 123 }});
+{% endscript %}
+</head>
+<body>
+the time is <div id='timeDiv'></div>
+</body>
+</html>

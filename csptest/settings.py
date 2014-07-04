@@ -46,6 +46,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_jinja',
+    'csp.djangotag',
+    'csptest.django_example',
 )
 
 MIDDLEWARE_CLASSES = (
